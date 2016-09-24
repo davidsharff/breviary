@@ -1,0 +1,6 @@
+{
+  "extends": "@abilitie/eslint-config",
+  "env": {
+    "node": true
+  }
+}

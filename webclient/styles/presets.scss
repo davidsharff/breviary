@@ -1,0 +1,44 @@
+@import "normalize.css/normalize.css";
+
+// Created using https://google-webfonts-helper.herokuapp.com/fonts/roboto?subsets=latin
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+body, :global(#app), :global(#root) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-self: stretch;
+}
+
+input {
+  padding: 5px 8px;
+  border: 1px #ccc solid;
+
+  &:focus {
+    border-color: #777;
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, body {
+  font-weight: 300;
+  margin: 0;
+}
+
+// Solves FlexBug #1 (as of 2015-02-05):
+// https://github.com/philipwalton/flexbugs
+*, *:before, *:after {
+  min-width: 0;
+  box-sizing: border-box;
+}
