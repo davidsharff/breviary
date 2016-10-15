@@ -16,7 +16,13 @@ class App extends React.Component {
           <h1>Breviary</h1>
           <Link to="/test">Update Coding Parameters</Link>
         </div>
-        {this.props.children}
+        <div className={styles.main}>
+          <div className={styles.leftNav}>
+          </div>
+          <div className={styles.content}>
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
   }

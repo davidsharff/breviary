@@ -1,7 +1,7 @@
-
 .container {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .header {
@@ -9,4 +9,23 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  min-height: 90px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.leftNav {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 15%;
+  background-color: mistyrose;
+}
+
+.content {
+  flex-basis: 85%;
+  background-color: lime;
 }
