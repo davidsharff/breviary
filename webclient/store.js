@@ -2,12 +2,21 @@
 
 const {createStore, compose, applyMiddleware} = require('redux');
 const {syncHistory} = require('react-router-redux');
+const _ = require('lodash');
+
+const constants = require('shared/constants');
 
 const history = require('./history');
 const reducer = require('./app-state-reducer');
 
 const initialState = {
-  main: {},
+  app: {
+    codingTypes: _.values(constants.CODING_TYPES),
+    codingParameters: [
+      {type: constants.CODING_TYPES.YES_NO, label: 'Conflict?'},
+      {type: constants.CODING_TYPES.YES_NO, label: 'Mentions Cats?'}
+    ]
+  },
   routing: null
 };
 

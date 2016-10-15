@@ -1,38 +1,32 @@
 'use strict';
 
 const React = require('react');
-const {connect} = require('react-redux');
 const {Router, Route} = require('react-router');
+const App = require('../app/app');
+const CodingParameters = require('../coding-parameters/coding-parameters');
 const history = require('../../history');
 
-@connect(() => ({
-}))
 class Root extends React.Component {
-  static propTypes = {};
+  static propTypes = {
+    children: React.PropTypes.node
+  };
 
   render() {
     return (
       <div id="root">
         <Router history={history}>
-          <Route path="/" component={Main} />
+          <Route path="/" component={App}>
+            <Route path="test" component={CodingParameters} />
+          </Route>
           <Route path="*" component={NotFound} />
         </Router>
+        {this.props.children}
       </div>
     );
   }
 }
 
 module.exports = Root;
-
-class Main extends React.Component {
-  render() {
-    return (
-      <div>
-        Hello!
-      </div>
-    );
-  }
-}
 
 class NotFound extends React.Component {
   render() {
