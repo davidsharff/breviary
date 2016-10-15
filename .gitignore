@@ -1,6 +1,5 @@
 /node_modules/
 /webclient-dist/
 npm-debug.log
-.idea/workspace.xml
-.idea/shelf/
+.idea
 .DS_Store
